@@ -7,11 +7,11 @@
 call_sig_reg(res, nr, threshold = 3.5, win = 10)
 }
 \arguments{
-\item{res}{An object returned from the sharpr2 function.}
+\item{res}{An object obtained from the sharpr2 function.}
 
 \item{nr}{An integer indicating which region in re to be plotted.}
 
-\item{threshold}{The FWER to control. The default is 3.5.}
+\item{threshold}{The regional FWER to control. The default is 3.5.}
 
 \item{win}{A window size for removing sporadic significant regions. If a significant consecutive region is small than win, it will be treated as false signals. The default is 10.}
 
@@ -25,7 +25,8 @@ motif: predicted 20bp motifs
 Given an object returned from the sharpr2 function, this function calls significant regions that contain motifs.
 }
 \examples{
-# call_sig_reg(re,1)
+# re <- sharpr2(data)
+# call_sig_reg(re,200000)
 }
-\keyword{ATAC-STAR}
+\keyword{HiDRA}
 \keyword{sharpr2}

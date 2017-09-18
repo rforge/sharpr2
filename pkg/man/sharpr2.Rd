@@ -5,7 +5,8 @@
 \title{sharpr2}
 \usage{
 sharpr2(data, l_min = 175, l_max = 450, f_rna = 10, f_dna = 0,
-  s_a = 300, verbose = FALSE, auto = TRUE, sig = TRUE, len = FALSE, alpha = 0.05, win = 10, mse = FALSE)
+  s_a = 300, verbose = FALSE, auto = TRUE, sig = TRUE, len = FALSE, 
+  alpha = 0.05, win = 10, mse = FALSE)
 }
 \arguments{
 \item{data}{A data.frame containing a HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA'}

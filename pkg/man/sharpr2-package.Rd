@@ -12,8 +12,8 @@ The package develops an algorithm for handling HiDRA datasets by extending MPRA-
 \tabular{ll}{
 Package: \tab sharpr2\cr
 Type: \tab Package\cr
-Version: \tab 0.0.1.2000 \cr
-Date: \tab 2017-09-05\cr
+Version: \tab 0.1.0.0000 \cr
+Date: \tab 2017-09-17\cr
 License: \tab GPL \cr
 }
 }

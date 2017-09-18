@@ -1,8 +1,13 @@
 call_sig_reg <- function(res, nr, threshold = 3.5, win = 10)
 {
+	if(class(res)!="sharpr2")
+	{
+		stop('The first argument must be an object obtained from sharpr2.')
+	}
+	
 	re <- res$score[[nr]]
 	
-	sig_reg <- which(re$est_a - threshold*sqrt(diag(re$var_nb)) > 0)
+	sig_reg <- which(re$est_a - threshold*sqrt(re$var_nb) > 0)
 	sig_reg_l <- length(sig_reg)
 	if(sig_reg_l>1)
 	{

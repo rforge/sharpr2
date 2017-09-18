@@ -7,7 +7,7 @@
 call_fdr(whole_re, thres_tr = 10, method = 'BH')
 }
 \arguments{
-\item{whole_re}{A list of objects of class sharpr2 for each chromosome.}
+\item{whole_re}{A list of the objects obtained from sharpr2 for each chromosome.}
 
 \item{thres_tr}{The threshold for the size of tiled reigons used for calculate FDR-adjusted p-values. The default value is 10.}
 
@@ -15,14 +15,15 @@ call_fdr(whole_re, thres_tr = 10, method = 'BH')
 
 }
 \value{
-gfdr: a result table of FDR-adjusted p-values.
+gfdr: a result table (data.frame) containing FDR-adjusted p-values, chromosome, region, the size and the index of the tiled region it is located.
 
 }
 \description{
 Calculate FDR-adjusted p-values.
 }
 \examples{
-# call_fdr(whole_re)
+# whole_re <- sharpr2(data)
+# call_fdr(list(whole_re))
 }
-\keyword{ATAC-STAR}
+\keyword{HiDRA}
 \keyword{sharpr2}

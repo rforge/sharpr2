@@ -5,7 +5,8 @@
 \title{plot.sharpr2}
 \usage{
 \method{plot}{sharpr2}(re, tr, unc = "CI", loess = FALSE, add = FALSE,
-  xlab = "Position", ylab = "Regulatory Score", cicol = 'orange', cimcol = 'grey', sreg = TRUE, ...)
+  xlab = "Position", ylab = "Regulatory Score", cicol = 'orange', cimcol = 'grey', 
+  sreg = TRUE, ...)
 }
 \arguments{
 \item{re}{An object returned from the sharpr2 function.}
@@ -31,10 +32,10 @@
 \item{...}{Other parameters for plot.}
 }
 \description{
-Given an object returned from the sharpr2 function, this function plots the estimated scores (with s.e. if available) for a tile region.
+Given an object returned from the sharpr2 function, this function plots the estimated scores (with s.e. if available) for a tiled region.
 }
 \examples{
 # plot(re,1,loess=FALSE)
 }
-\keyword{ATAC-STARR}
+\keyword{HiDRA}
 \keyword{sharpr2}

@@ -4,7 +4,7 @@
 #' @param whole_re a list of objects of class sharpr2 for each chromosome.  
 #' @param thres_tr the threshold for the size of tiled reigons used for calculate FDR-adjusted p-values. The default value is 10.  
 #' @param method the method for calculating FDR-adjusted p-values. See the function 'p.adjust' for more details abount the method. The default is 'BH'.
-#' @keywords sharpr2 ATAC-STAR
+#' @keywords sharpr2 HiDRA
 #' @return gfdr: a result table of FDR-adjusted p-values.
 #' @export
 #' @examples
