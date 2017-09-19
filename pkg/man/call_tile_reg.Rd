@@ -7,20 +7,20 @@
 call_tile_reg(data)
 }
 \arguments{
-\item{data}{A data.frame for an ATAC-STAR dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA', and is sorted by 'start'.}
+\item{data}{A data.frame for a HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA', and is sorted by 'start'.}
 }
 \value{
-tile_reg: A list containing the row ids in the data for each tile region.
+tile_reg: A list containing the row ids in the data for each tiled region.
 
-size the: number of reads in each tile region.
+size: The number of reads in each tiled region.
 
-num_r: the total number of tile regions.
+num_r: The total number of tiled regions.
 }
 \description{
-For an ATAC-STAR dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read).
+For a HiDRA dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read).
 }
 \examples{
 # call_tile_reg(data)
 }
-\keyword{ATAC-STAR}
+\keyword{HiDRA}
 \keyword{sharpr2}

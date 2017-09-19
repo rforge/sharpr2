@@ -1,6 +1,5 @@
 ﻿\name{sharpr2-package}
 \alias{sharpr2-package}
-\alias{sharpr2}
 \docType{package}
 \title{
 Estimating regularoty scores and identifying HDE for HiDRA data
@@ -12,8 +11,8 @@ The package develops an algorithm for handling HiDRA datasets by extending MPRA-
 \tabular{ll}{
 Package: \tab sharpr2\cr
 Type: \tab Package\cr
-Version: \tab 0.1.0.0000 \cr
-Date: \tab 2017-09-17\cr
+Version: \tab 0.1.0.1000 \cr
+Date: \tab 2017-09-18\cr
 License: \tab GPL \cr
 }
 }
@@ -27,6 +26,6 @@ Maintainer: Liang He <lianghe@mit.edu>
 \keyword{ package }
 
 \examples{
-
+# sharpr2(data)
 
 }

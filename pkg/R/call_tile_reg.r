@@ -1,11 +1,11 @@
 #' call_tile_reg
 #'
-#' For an ATAC-STAR dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read).
-#' @param data A data.frame for an ATAC-STAR dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA', and is sorted by 'start'. 
-#' @keywords sharpr2 ATAC-STAR
-#' @return tile_reg: A list containing the row ids in the data for each tile region.
-#' @return size the: number of reads in each tile region.
-#' @return num_r: the total number of tile regions.
+#' For a HiDRA dataset on a given chromosome, this function calls tiled regions (the regions covered by at least one read).
+#' @param data A data.frame for a HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA', and is sorted by 'start'. 
+#' @keywords sharpr2 HiDRA
+#' @return tile_reg: A list containing the row ids in the data for each tiled region.
+#' @return size the: number of reads in each tiled region.
+#' @return num_r: the total number of tiled regions.
 #' @export
 #' @examples
 #' # call_tile_reg(data)

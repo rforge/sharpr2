@@ -4,14 +4,14 @@
 \alias{plot.sharpr2}
 \title{plot.sharpr2}
 \usage{
-\method{plot}{sharpr2}(re, tr, unc = "CI", loess = FALSE, add = FALSE,
+\method{plot}{sharpr2}(x, tr, unc = "CI", loess = FALSE, add = FALSE,
   xlab = "Position", ylab = "Regulatory Score", cicol = 'orange', cimcol = 'grey', 
   sreg = TRUE, ...)
 }
 \arguments{
-\item{re}{An object returned from the sharpr2 function.}
+\item{x}{An object returned from the sharpr2 function.}
 
-\item{tr}{An integer indicating which region in re to be plotted.}
+\item{tr}{An integer indicating which tiled region to be plotted.}
 
 \item{unc}{'MSE' or 'CI', indicating whether to plot sqrt(MSE) or 95\%CI for uncertainty. The default is 'CI'.}
 

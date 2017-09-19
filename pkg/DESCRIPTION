@@ -1,6 +1,6 @@
 Package: sharpr2
 Title: Estimating Regularoty Scores and Identifying HDE for HiDRA Data
-Version: 0.1.0.0000
+Version: 0.1.0.1000
 Author: Liang He
 Maintainer: Liang He <lianghe@mit.edu>
 Description: The package develops an algorithm for handling HiDRA datasets by extending MPRA-SHARPR.

@@ -1,9 +1,9 @@
 #' sharpr2
 #'
-#' For an ATAC-STAR dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read), and calculates regulatory scores for each tile region. The regulatory scores are based on standardized log(RNA/PLASMID).
-#' @param data A data.frame for an ATAC-STAR dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA' 
-#' @param l_min the minimum length for filtering a read. The default is 175.  
-#' @param l_max the maximum length for filtering a read. The default is 450.
+#' For a HiDRA dataset on a given chromosome, this function calls tiled regions (the regions covered by at least one read), and calculates regulatory scores for each tiled region. The regulatory scores are based on standardized log(RNA/PLASMID).
+#' @param data A data.frame for an HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA' 
+#' @param l_min the minimum length for filtering a read. The default is 150.  
+#' @param l_max the maximum length for filtering a read. The default is 600.
 #' @param f_rna the minimum RNA count for filtering a read. The default is 10.
 #' @param f_dna the minimum PLASMID count for filtering a read. The default is 0.
 #' @param s_a A variance hyperparameter in the prior for the latent regulatory scores. The default is 300.
@@ -12,18 +12,18 @@
 #' @param sig An indicator of whether to identify significant regions for the estimated scores. Only valid if auto=TRUE. The default is TRUE.
 #' @param len An indicator of whether to model log(RNA/PLASMID) of each read as the average or the sum of the latent regulatory scores. The default is FALSE, which is the sum.
 #' @param alpha A threshold to call the significant region. The default is 0.05.
-#' @param win A window size for removing sporadic significant regions. If a significant consecutive region is small than win, it will be treated as false signals. The default is 10.
-#' @keywords sharpr2 ATAC-STAR
-#' @return score: the regulatory scores for each tile region.
-#' @return region: the start and end positions for each tile region.
-#' @return n_reg: total number of tile regions.
-#' @return n_read: the number of reads in each tile region.
+#' @param win A window size for removing sporadic significant regions. If a significant consecutive region is small than win, it will be treated as false signals. The default is 5.
+#' @keywords sharpr2 HiDRA
+#' @return score: the regulatory scores for each tiled region.
+#' @return region: the start and end positions for each tiled region.
+#' @return n_reg: total number of tiled regions.
+#' @return n_read: the number of reads in each tiled region.
 #' @export
 #' @examples
 #' # sharpr2(data)
 
 
-sharpr2 <- function(data, l_min = 175, l_max = 450, f_rna = 10, f_dna = 0, s_a = 300, verbose = FALSE, auto = TRUE, sig = TRUE, len = FALSE, alpha = 0.05, win = 10, mse = FALSE)
+sharpr2 <- function(data, l_min = 150, l_max = 600, f_rna = 10, f_dna = 0, s_a = 300, verbose = FALSE, auto = TRUE, sig = TRUE, len = FALSE, alpha = 0.05, win = 5, mse = FALSE)
 {
 	data$length <- data$end - data$start + 1
 	
@@ -52,7 +52,7 @@ sharpr2 <- function(data, l_min = 175, l_max = 450, f_rna = 10, f_dna = 0, s_a =
 	
 	if(verbose == TRUE)
 	{
-		cat('Call tile regions: ', n_s, '\n')
+		cat('Call tiled regions: ', n_s, '\n')
 	}
 	
 	

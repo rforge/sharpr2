@@ -4,16 +4,16 @@
 \alias{sharpr2}
 \title{sharpr2}
 \usage{
-sharpr2(data, l_min = 175, l_max = 450, f_rna = 10, f_dna = 0,
+sharpr2(data, l_min = 150, l_max = 600, f_rna = 10, f_dna = 0,
   s_a = 300, verbose = FALSE, auto = TRUE, sig = TRUE, len = FALSE, 
-  alpha = 0.05, win = 10, mse = FALSE)
+  alpha = 0.05, win = 5, mse = FALSE)
 }
 \arguments{
 \item{data}{A data.frame containing a HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA'}
 
-\item{l_min}{The fragments with a length smaller than l_min will not be processed. The default is 175.}
+\item{l_min}{The fragments with a length smaller than l_min will not be processed. The default is 150.}
 
-\item{l_max}{The fragments with a length larger than l_max will not be processed. The default is 450.}
+\item{l_max}{The fragments with a length larger than l_max will not be processed. The default is 600.}
 
 \item{f_rna}{The fragments with an RNA count smaller than f_rna will not be processed. The default is 10.}
 
@@ -23,36 +23,36 @@ sharpr2(data, l_min = 175, l_max = 450, f_rna = 10, f_dna = 0,
 
 \item{verbose}{An indicator of whether to show processing information. The default is FALSE.}
 
-\item{auto}{An indicator of whether to automatically estimate the ridge coefficient lambda from the data for each tile region. The default is TRUE. If 'auto' is TRUE, 's_a' is ignored and a ridge coefficient is estimated for each tile region separately. If 'auto' is FALSE, a global ridge coefficient (1/s_a) is used.}
+\item{auto}{An indicator of whether to automatically estimate the ridge coefficient lambda from the data for each tile region. The default is TRUE. If \emph{auto} is TRUE, \emph{s_a} is ignored and a ridge coefficient is estimated for each tiled region separately. If \emph{auto} is FALSE, a global ridge coefficient (1/s_a) is used.}
 
 \item{sig}{An indicator of whether to identify significant motif regions for the estimated scores. Only valid if auto=TRUE. The default is TRUE.}
 
 \item{len}{An indicator of whether to model log(RNA/PLASMID) of each read as the average or the sum of the latent regulatory scores. The default is FALSE, which is the sum.}
 
-\item{alpha}{A threshold to call the significant region. The default is 0.05.}
+\item{alpha}{A regional FWER to call HDEs (the significant regulatory region). The default is 0.05.}
 
-\item{win}{A window size for removing sporadic significant regions. If a significant consecutive region is small than win, it will be treated as false signals. The default is 10.}
+\item{win}{A window size for removing sporadic identified significant regions. If a significant consecutive region is small than \emph{win}, it will be treated as false signals. The default is 5.}
 
 \item{mse}{An indicator of whether mean square errors are included in the output results. The default is FALSE.}
 
 }
 \value{
-score: the regulatory scores for each tile region. This list contains four components: est_a (the regulatory scores at each locus), sd_e (the sqare root of the mean square error), var_nb (the variance of the esitmate at each locus), lambda (the ridge coefficient).
+score: the regulatory scores for each tiled region. This list contains four components: est_a (the regulatory scores at each locus), sd_e (the sqare root of the mean square error), var_nb (the variance of the esitmate at each locus), lambda (the ridge coefficient).
 
-region: the start and end positions for each tile region.
+region: the start and end positions for each tiled region.
 
-n_reg: total number of tile regions.
+n_reg: total number of tiled regions.
 
-n_read: the number of reads in each tile region.
+n_read: the number of reads in each tiled region.
 
-sig_reg: identified significant regions based on the cutoff.
+sig_reg: identified HDEs based on the cutoff.
 
 motif: predicted 20bp motifs 
 
-cutoff: the cutoff used to call signifnicant regions for the tiled region.
+cutoff: the cutoff used to call HDEs for the tiled region.
 }
 \description{
-For a HiDRA dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read), and calculates regulatory scores for each tile region. The regulatory scores are based on standardized log(RNA/PLASMID).
+For a HiDRA dataset on a given chromosome, this function calls tiled regions (the regions covered by at least one read), and calculates regulatory scores for each tiled region. The regulatory scores are based on standardized log(RNA/PLASMID).
 }
 
 \details{
