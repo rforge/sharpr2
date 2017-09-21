@@ -22,6 +22,8 @@ Liang He
 Maintainer: Liang He <lianghe@mit.edu>
 }
 \references{
+Xinchen Wang, Liang He, Sarah Goggin, Alham Saadat, Li Wang, Melina Claussnitzer, Manolis Kellis. 
+High-resolution genome-wide functional dissection of transcriptional regulatory regions in human.  
 }
 \keyword{ package }
 
