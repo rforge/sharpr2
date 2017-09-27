@@ -36,6 +36,11 @@ sharpr2 <- function(data, l_min = 150, l_max = 600, f_rna = 10, f_dna = 0, s_a =
 		stop("The arguments f_dna and f_rna must be non-negative.")
 	}
 	
+	if((alpha<=0)|(alpha>=1))
+	{
+		stop("The argument alpha must be between 0 and 1.")
+	}
+	
 	if(verbose == TRUE)
 	{
 		cat('Total reads after filtering: ', nrow(data_c), '\n')

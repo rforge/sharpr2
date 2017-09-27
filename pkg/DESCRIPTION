@@ -1,9 +1,9 @@
 Package: sharpr2
-Title: Estimating Regularoty Scores and Identifying HDE for HiDRA Data
-Version: 0.1.0.1000
+Title: Estimating Regularoty Scores and Identifying High Resolution Driver Elements for HiDRA Data
+Version: 0.1.1.0000
 Author: Liang He
 Maintainer: Liang He <lianghe@mit.edu>
-Description: An algorithm for identifying high-resolution driver elements (HDE) for datasets from a HiDRA library.
+Description: The package develops an algorithm for handling HiDRA datasets by extending MPRA-SHARPR.
 Depends: R (>= 3.3.0)
 Imports:
     mvtnorm (>= 1.0)

@@ -20,7 +20,8 @@ num_r: The total number of tiled regions.
 For a HiDRA dataset on a given chromosome, this function calls tile regions (the regions covered by at least one read).
 }
 \examples{
-# call_tile_reg(data)
+data(hidra_ex)
+tiled <- call_tile_reg(hidra_ex)
 }
 \keyword{HiDRA}
 \keyword{sharpr2}

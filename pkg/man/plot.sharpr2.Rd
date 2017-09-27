@@ -27,7 +27,7 @@
 
 \item{cimcol}{The color for filling the regions within CIs. The default is 'grey'.}
 
-\item{sreg}{An indicator for whether to highlight the significant regions. The default is TRUE.}
+\item{sreg}{An indicator for whether to highlight the identified driver element regions. The default is TRUE.}
 
 \item{...}{Other parameters for plot.}
 }
@@ -35,7 +35,9 @@
 Given an object returned from the sharpr2 function, this function plots the estimated scores (with s.e. if available) for a tiled region.
 }
 \examples{
-# plot(re,1,loess=FALSE)
+data(hidra_ex)
+re <- sharpr2(hidra_ex, l_min = 150, l_max = 600, f_dna = 5, f_rna = 0, sig=FALSE)
+plot(re,584)
 }
 \keyword{HiDRA}
 \keyword{sharpr2}

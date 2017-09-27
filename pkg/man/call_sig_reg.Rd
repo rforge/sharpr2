@@ -17,12 +17,12 @@ call_sig_reg(res, nr, threshold = 3.5, win = 10)
 
 }
 \value{
-sig_reg: identified significant regions.
+sig_reg: identified regions containing driver elements.
 
-motif: predicted 20bp motifs
+motif: predicted 20bp driver elements
 }
 \description{
-Given an object returned from the sharpr2 function, this function calls significant regions that contain motifs.
+Given an object returned from the sharpr2 function, this function calls significant regions that contain driver elements.
 }
 \examples{
 # re <- sharpr2(data)
