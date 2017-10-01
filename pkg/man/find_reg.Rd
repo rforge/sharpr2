@@ -8,16 +8,18 @@ find_reg(re,pos)
 }
 \arguments{
 \item{re}{An object obtained from sharpr2.}
-\item{pos}{A position for which the tile region is searched.}
+\item{pos}{A position for which the tiled region is searched.}
 }
 \value{
-ind: the index of the tile region in the object from sharpr2. If no such tile region is found, NA is returned.
+ind: the index of the tiled region in the object from sharpr2. If no such tile region is found, NA is returned.
 }
 \description{
-Given an object from sharpr2 and a position, this function finds the tile region containing the position.
+Given an object from sharpr2 and a position, this function finds the tiled region containing the position.
 }
 \examples{
-# find_reg(re,100000)
+data(hidra_ex)
+re <- sharpr2(hidra_ex[1:2000,], l_min = 150, l_max = 600, f_dna = 5, f_rna = 0, sig=FALSE)
+find_reg(re,1000000)
 }
 \keyword{ATAC-STAR}
 \keyword{sharpr2}

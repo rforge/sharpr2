@@ -5,7 +5,7 @@
 An example dataset including a region of one chromosome from a HiDRA library  
 }
 \description{
-This is an example dataset consisting of 'start', 'end', 'PLASMID', 'RNA'.
+This is an example dataset containing 10000 fragments with four columns 'start', 'end', 'PLASMID', 'RNA'. 
 }
 \usage{data(hidra_ex)}
 
