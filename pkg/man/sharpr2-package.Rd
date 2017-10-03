@@ -2,7 +2,7 @@
 \alias{sharpr2-package}
 \docType{package}
 \title{
-Estimating regularoty scores and identifying high resolution driver elements for HiDRA data
+Estimating regulatory scores and identifying high resolution driver elements for HiDRA data
 }
 \description{
 The package develops an algorithm for identifying high-resolution driver elements for datasets from a HiDRA (High-Definition Reporter Assay) library. 
