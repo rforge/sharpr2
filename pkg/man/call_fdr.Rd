@@ -22,8 +22,13 @@ gfdr: a result table (data.frame) containing FDR-adjusted p-values, chromosome, 
 Calculate FDR-adjusted p-values.
 }
 \examples{
-# whole_re <- sharpr2(data)
-# call_fdr(list(whole_re))
+
+\donttest{
+data(hidra_ex)
+whole_re <- sharpr2(hidra_ex, l_min = 150, l_max = 600, f_dna = 5, f_rna = 0, sig=FALSE)
+call_fdr(list(whole_re))
+}
+
 }
 \keyword{HiDRA}
 \keyword{sharpr2}

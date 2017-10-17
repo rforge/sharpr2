@@ -9,9 +9,9 @@ call_sig_reg(res, nr, threshold = 3.5, win = 10)
 \arguments{
 \item{res}{An object obtained from the sharpr2 function.}
 
-\item{nr}{An integer indicating which region in re to be plotted.}
+\item{nr}{An integer indicating the number of tiled region in res for which driver elements will be called.}
 
-\item{threshold}{The regional FWER to control. The default is 3.5.}
+\item{threshold}{The cutoff to identify driver elements in the tiled region. The positions with a z-score larger than the threshold will be called. The default is 3.5.}
 
 \item{win}{A window size for removing sporadic significant regions. If a significant consecutive region is small than win, it will be treated as false signals. The default is 10.}
 
@@ -19,14 +19,17 @@ call_sig_reg(res, nr, threshold = 3.5, win = 10)
 \value{
 sig_reg: identified regions containing driver elements.
 
-motif: predicted 20bp driver elements
+motif: predicted 20bp core driver elements
 }
 \description{
-Given an object returned from the sharpr2 function, this function calls significant regions that contain driver elements.
+Given an object returned from the sharpr2 function, this function calls significant regions that contain driver elements for a specific tiled region based on a user-defined threshold.
 }
 \examples{
-# re <- sharpr2(data)
-# call_sig_reg(re,200000)
+\donttest{
+data(hidra_ex)
+re  <- sharpr2(hidra_ex[1:2000,], l_min = 150, l_max = 600, f_dna = 5, f_rna = 0, sig=TRUE)
+call_sig_reg(re,850, threshold=2.5)
+}
 }
 \keyword{HiDRA}
 \keyword{sharpr2}
