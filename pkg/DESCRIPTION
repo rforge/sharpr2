@@ -1,9 +1,9 @@
 Package: sharpr2
 Title: Estimating Regulatory Scores and Identifying High Resolution Driver Elements for High-Definition Reporter Assay ('HiDRA') Data
-Version: 1.0.0.0000
+Version: 1.0.0.0
 Author: Liang He
 Maintainer: Liang He <lianghe@mit.edu>
-Description: An algorithm for identifying high-resolution driver elements for datasets from a 'HiDRA' library. Xinchen Wang, Liang He, Sarah Goggin, Alham Saadat, Li Wang, Melina Claussnitzer, Manolis Kellis (2017) <https://www.biorxiv.org/content/early/2017/09/27/193136>
+Description: An algorithm for identifying high-resolution driver elements for datasets from a 'HiDRA' library. Xinchen Wang, Liang He, Sarah Goggin, Alham Saadat, Li Wang, Melina Claussnitzer, Manolis Kellis (2017) <https://www.biorxiv.org/content/early/2017/09/27/193136>.
 Depends: R (>= 3.3.0)
 Imports:
     mvtnorm (>= 1.0)
