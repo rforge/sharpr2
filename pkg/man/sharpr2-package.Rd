@@ -11,8 +11,8 @@ The package develops an algorithm for identifying high-resolution driver element
 \tabular{ll}{
 Package: \tab sharpr2\cr
 Type: \tab Package\cr
-Version: \tab 1.0.0.0000 \cr
-Date: \tab 2017-10-13\cr
+Version: \tab 1.1.0.0000 \cr
+Date: \tab 2018-02-01\cr
 License: \tab GPL \cr
 }
 }
