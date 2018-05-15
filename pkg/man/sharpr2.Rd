@@ -9,7 +9,7 @@ sharpr2(data, l_min = 150, l_max = 600, f_rna = 10, f_dna = 0,
   alpha = 0.05, win = 5, mse = FALSE, max_t = 1)
 }
 \arguments{
-\item{data}{A data.frame containing a HiDRA dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA'. 'PLASMID' and 'RNA' are the values for DNA and RNA, which should be non-negative real numbers (average value over multiple replicates) or integers (counts).}
+\item{data}{A data.frame containing an ATAC-STARR dataset for one chromosome. The data.frame must contain four columns: 'start', 'end', 'PLASMID', 'RNA'. 'PLASMID' and 'RNA' are the values for DNA and RNA, which should be non-negative real numbers (average value over multiple replicates) or integers (counts).}
 
 \item{l_min}{The fragments with a length smaller than l_min will not be processed. The default is 150.}
 
